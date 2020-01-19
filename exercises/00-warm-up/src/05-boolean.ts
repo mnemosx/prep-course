@@ -1,11 +1,11 @@
 export {};
 
-const isHappy = "true";
+const isHappy = true;
 
-if (isHappy == false) {
-  console.log("I am happy");
-} else {
+if (!isHappy) {
   console.log("I am not happy");
+} else {
+  console.log("I am happy");
 }
 
 // Expected output: "I am happy"

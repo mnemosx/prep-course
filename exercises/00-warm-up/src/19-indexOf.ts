@@ -8,7 +8,14 @@ export {};
  */
 
 // You are allowed to edit only this function
-function remove(arr, valueToRemove) {}
+function remove(arr, valueToRemove) {
+  let newArr = [...arr];
+  let i = newArr.indexOf(valueToRemove);
+  if (i > -1) {
+    newArr.splice(i, 1);
+  }
+  return newArr;
+}
 
 const numbers = [1, 2, 3];
 const names = ["John", "Alice", "Ellen"];
@@ -16,6 +23,8 @@ const names = ["John", "Alice", "Ellen"];
 const newNumbers = remove(numbers, 2);
 const newNames = remove(names, "Ellen");
 
+console.log(numbers);
+console.log(names);
 console.log(newNumbers);
 console.log(newNames);
 

@@ -13,9 +13,20 @@
  */
 
 class Queue {
-  add(n: number) {}
-
-  remove() {}
+  private elements: Array<number> = [];
+  add(n: number) {
+    this.elements.push(n);
+  }
+  remove() {
+    this.elements.shift();
+  }
 }
+
+// const q = new Queue();
+// q.add(1);
+// q.add(5);
+// q.add(9);
+// q.remove();
+// console.log(q);
 
 export { Queue };

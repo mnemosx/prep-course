@@ -1,5 +1,19 @@
 # PrepCourse | [CODELEX](https://codelex.io)
 
+## TO-DO
+
+warm-up: 
+
+- ?
+
+easy: 
+
+- 20-matrix
+
+mini-projects: 
+
+ - all
+
 ## Work Station Setup
 
 Carefully execute all of the steps mentioned in [Work Station Setup](./work-station-setup.md) guide. Make sure that you have everything installed and verified.

@@ -1,6 +1,16 @@
 export {};
 
-function goThroughNumbers(start, end) {}
+function goThroughNumbers(start, end) {
+  let arr = [];
+  if (start > end) console.log("invalid input");
+  else {
+    for (let i = start; i <= end; i++) {
+      let odd = i % 2 == 0 ? "even" : "odd";
+      arr.push(`> ${i} - ${odd}`);
+    }
+    console.log(arr);
+  }
+}
 
 goThroughNumbers(3, 7);
 /* Expected output:

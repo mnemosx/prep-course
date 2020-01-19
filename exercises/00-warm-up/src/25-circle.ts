@@ -2,8 +2,14 @@ export {};
 
 function Circle(radius) {
   this.radius = radius;
-  this.area = function() {};
-  this.perimeter = function() {};
+  // area method
+  this.area = function() {
+    return (Math.PI * this.radius * this.radius).toFixed(2);
+  };
+  // perimeter method
+  this.perimeter = function() {
+    return (2 * Math.PI * this.radius).toFixed(2);
+  };
 }
 
 const c = new Circle(3);

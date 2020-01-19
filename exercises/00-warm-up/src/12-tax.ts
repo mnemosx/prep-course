@@ -8,7 +8,9 @@ export {};
  */
 
 // You are allowed to change only this function
-function calculateSalesTax() {}
+function calculateSalesTax(price: number) {
+  return (price * 0.21).toFixed(2);
+}
 
 const product = "You don't know JS";
 const price = 19.99;
@@ -17,6 +19,7 @@ const salesTax = calculateSalesTax(price);
 console.log("Product: " + product);
 console.log("Price: £" + price);
 console.log("Sales tax: £" + salesTax);
+console.log(typeof price, typeof salesTax);
 console.log("Total: £" + (price + salesTax));
 
 /* Expected output:

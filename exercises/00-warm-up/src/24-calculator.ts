@@ -1,14 +1,36 @@
 export {};
 
-function add() {}
+function add(val1, val2) {
+  return val1 + val2;
+}
 
-function subtract() {}
+function subtract(val1, val2) {
+  return val1 - val2;
+}
 
-function sum() {}
+function sum(arr) {
+  var total = 0;
+  for (let i in arr) {
+    total += arr[i];
+  }
+  return total;
+}
 
-function multiply() {}
+function multiply(arr) {
+  var total = 1;
+  for (var i = 0; i < arr.length; i++) {
+    total *= arr[i];
+  }
+  return total;
+}
 
-function power() {}
+function power(val, pwr) {
+  let power = 1;
+  for (let i = 0; i < pwr; i++) {
+    power = power * val;
+  }
+  return power;
+}
 
 console.log(add(1, 2)); // Expected output: 3
 console.log(subtract(1, 2)); // Expected output: -1

@@ -10,7 +10,19 @@
  */
 
 class Words {
-  count(str: string) {}
+  count(str: string) {
+    var counts: any = {};
+
+    const matches = str.toLowerCase().match(/[^\s]+/g);
+    if (matches !== null) {
+      for (const match of matches) {
+        if (counts.hasOwnProperty(match)) counts[match]++;
+        else counts[match] = 1;
+      }
+    }
+
+    return counts;
+  }
 }
 
 export { Words };

@@ -11,15 +11,26 @@ class HighScores {
   }
 
   get latest() {
-    return 0;
+    return this.scores[this.scores.length - 1];
   }
 
   get personalBest() {
-    return 0;
+    let best = 0;
+    for (let i in this.scores) {
+      let currentScore = this.scores[i];
+      if (currentScore > best) {
+        best = currentScore;
+      }
+    }
+    return best;
   }
 
   get personalTopThree() {
-    return 0;
+    let scores = this.scores;
+    let sorted = scores.sort((a, b) => a - b);
+    let topThree = sorted.slice(-3);
+    let reversedTopThree = topThree.sort((a, b) => b - a);
+    return topThree;
   }
 }
 
