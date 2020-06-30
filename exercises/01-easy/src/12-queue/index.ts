@@ -13,12 +13,12 @@
  */
 
 class Queue {
-  private elements: Array<number> = [];
-  add(n: number) {
+  elements: Array<number> = [];
+  add(n: number): void {
     this.elements.push(n);
   }
-  remove() {
-    this.elements.shift();
+  remove(): number | undefined {
+    return this.elements.shift();
   }
 }
 
