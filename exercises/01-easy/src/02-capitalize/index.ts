@@ -19,6 +19,8 @@ function capitalize(str: string) {
     newArray.push(word);
   }
   return newArray.join(" ");
+  
+//   return str.split(" ").map(word => word.charAt(0).toUpperCase() + word.substr(1)).join(" ")
 }
 
 export { capitalize };
