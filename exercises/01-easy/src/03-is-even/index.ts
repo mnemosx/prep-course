@@ -10,6 +10,8 @@
  * isEven(3) === false
  */
 
+const ODD_DIGITS = ['1', '3', '5', '7', '9']
+
 function isEven(n: number) {
   let strings = n.toString();
 
