@@ -1,10 +1,7 @@
 export {};
 
-const removeFromArray = function(arr, num, ...args) {
-  let allArgs = [num, ...args];
-  console.log(allArgs);
-  let newArr = allArgs.forEach(arg => arr.filter(e => e === arg));
-  return newArr;
+const removeFromArray = function(arr,...args) {
+   return arr.filter(el => args.indexOf(el) < 0)
 };
 
 console.log(removeFromArray([1, 2, 3, 4], 3)); // Expected output: [1, 2, 4]
