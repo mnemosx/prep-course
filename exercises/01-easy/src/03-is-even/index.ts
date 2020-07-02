@@ -25,6 +25,12 @@ function isEven(n: number) {
   } else {
     return true;
   }
+  
+  // -----
+  
+//   const wholePart = n.toString().split('.')[0]
+//   const lastDigit = wholePart.slice(wholePart.length -1)
+//   return ODD_DIGITS.indexOf(lastDifit) === -1
 }
 
 export { isEven };
