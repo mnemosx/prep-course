@@ -36,18 +36,21 @@ describe("Grid", () => {
     grid.removeApple(apple);
 
     expect(grid.isAppleInside(apple)).toBeFalsy();
+    expect(grid.getApples().length).toEqual(4) // sandris pielika, man nebija
   });
   it("should seed apples", () => {
     const grid = new Grid(configuration);
+//     var uztaisīt, šeit izsaukt grid.Clear() -> this.apples = [] Grid.ts failā
     grid.removeApple(grid.getApples()[0]);
     grid.removeApple(grid.getApples()[0]);
     grid.removeApple(grid.getApples()[0]);
     grid.removeApple(grid.getApples()[0]);
     grid.removeApple(grid.getApples()[0]);
+    expect(grid.isDone()).toBeTruthy()
 
-    const apples = grid.getApples();
     grid.seed();
-
-    expect(apples.length).toBe(5);
+    
+    const apples = grid.getApples();
+    expect(apples.length).toEqual(5);
   });
 });
