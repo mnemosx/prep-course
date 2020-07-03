@@ -9,6 +9,7 @@ export class Grid {
     new Cell(37, 22),
     new Cell(39, 22)
   ];
+  // velāk, kad ir seed() gatavs, apples = [] un konstruktorā izsauc this.seed()
 
   constructor(configuration: Configuration) {
     this.configuration = configuration;
@@ -19,8 +20,8 @@ export class Grid {
       const x = Math.floor(Math.random() * this.configuration.nbCellsX)
       const y = Math.floor(Math.random() * this.configuration.nbCellsY)
       this.apples.push(new Cell(x, y))
-      
     }
+    // problēmas - jauns apple tur, kur atrodas čūska vai jau esošs ābols
   }
 
   isAppleInside(cell: Cell): boolean {
@@ -35,7 +36,8 @@ export class Grid {
   }
 
   isDone(): boolean {
-    return false;
+    // lai ģenerētos jauni apples
+    return this.apples.length === 0;
   }
 
   getApples(): Cell[] {
