@@ -77,5 +77,45 @@ describe("Snake", () => {
             new Cell(3, 0),
             new Cell(4, 0),
         ])
+        
+        // or maybe 
+//         snake.move()
+//         expect(snake.getTail().length).toEqual(3)
+        
+//         snake.move()
+//         expect(snake.getTail().length).toEqual(4)
+        
+//         snake.move()
+//         expect(snake.getTail().length).toEqual(5)
+        
+//         snake.move()
+//         expect(snake.getTail().length).toEqual(5)
+
+    })
+    it("should be able to move left", () => {
+        const snake = new Snake()
+         
+        
+        expect(snake.isSnake(snake.getHead())).toBeTruthy()
+        expect(snake.isSnake(snake.getHead())).toBeTruthy()
+        
+        expect(snake.isSnake(new Cell(999, 999))).toBeFalsy()
+    })
+    
+    // lai neskipotu gājienu, kad ātru spiež pogas
+    it("should remember each key press", () => {
+        const snake = new Snake()
+
+        snake.setDirection('Down')
+        snake.setDirection('Left')
+        snake.setDirection('Up')
+
+        expect(snake.getDirection()).toEqual("Down")
+        
+        snake.move()
+        expect(snake.getDirection()).toEqual("Left")
+        
+        snake.move()
+        expect(snake.getDirection()).toEqual("Up")
     })
 })
