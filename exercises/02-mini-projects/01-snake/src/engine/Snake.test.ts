@@ -92,12 +92,12 @@ describe("Snake", () => {
 //         expect(snake.getTail().length).toEqual(5)
 
     })
-    it("should be able to move left", () => {
+    it("should die when hit itself", () => {
         const snake = new Snake()
          
         
         expect(snake.isSnake(snake.getHead())).toBeTruthy()
-        expect(snake.isSnake(snake.getHead())).toBeTruthy()
+        expect(snake.isSnake(snake.getTail()[0])).toBeTruthy()
         
         expect(snake.isSnake(new Cell(999, 999))).toBeFalsy()
     })
