@@ -9,6 +9,10 @@ export class Game {
 
   getTurn(): XO {
     return this.turn;
+//     sākumā 
+//     const countX = this.cells.filter((cell) => celll === "X").length
+//     const countO = this.cells.filter((cell) => celll === "O").length
+//     return CountX === countO ? "X" : "O"
   }
 
   getWinner(): XO {
@@ -33,6 +37,12 @@ export class Game {
       return this.cells[6];
     return "-";
   }
+  
+  // saīsināti
+//   private areCellsEqual(x:number, y:number, z:number) {
+//     return this.cells[x] === this.cells[y] && this.cells[y] === this.cells[z]
+//   }
+  // un izsaukt ar this.areCellsEqual(0,1,2)
 
   isTie(): boolean {
     if (!this.cells.includes("-") && this.getWinner() === "-") return true;
